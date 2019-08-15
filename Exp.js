@@ -1,69 +1,174 @@
-import React, { Component } from 'react'
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, Button, CardText, CardMenu, IconButton } from 'react-mdl';
-
+import React, { Component } from "react";
+import {
+  Tabs,
+  Tab,
+  Grid,
+  Cell,
+  Card,
+  CardTitle,
+  CardActions,
+  Button,
+  CardText,
+  CardMenu,
+  IconButton
+} from "react-mdl";
 
 export class Exp extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {activeTab: 0 };
+  constructor(props) {
+    super(props);
+    this.state = { activeTab: 0 };
+  }
+  toggleCategories() {
+    if (this.state.activeTab === 0) {
+      return (
+        <div className="container">
+          <div className="projects-grid">
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "black", height: "200px", background: "#fff" }}
+              >
+                Experience00
+              </CardTitle>
+              <CardText>Dope Stuff</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#fff" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
 
+            {/*Project 2*/}
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "#black", height: "200px", background: "#fff" }}
+              >
+                Experience0
+              </CardTitle>
+              <CardText>Dope Stuff1</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#black" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+
+            {/*Project 3*/}
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "black", height: "200px", background: "#fff" }}
+              >
+                Experience1
+              </CardTitle>
+              <CardText>Dope Stuff2</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#fff" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+
+            {/*Project 4*/}
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "#black", height: "200px", background: "#fff" }}
+              >
+                Experience2
+              </CardTitle>
+              <CardText>Dope Stuff3</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#fff" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+
+            {/*Project 5*/}
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "#black", height: "200px", background: "#fff" }}
+              >
+                Experience3
+              </CardTitle>
+              <CardText>Dope Stuff4</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#fff" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+
+            {/*Project 5*/}
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "#black", height: "200px", background: "#fff" }}
+              >
+                Experience3
+              </CardTitle>
+              <CardText>Dope Stuff4</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#fff" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+
+            {/*Project 5*/}
+            <Card shadow={5} style={{ minWidth: "300px", margin: "1em" }}>
+              <CardTitle
+                style={{ color: "#black", height: "200px", background: "#fff" }}
+              >
+                Experience3
+              </CardTitle>
+              <CardText>Dope Stuff4</CardText>
+              <CardActions border>
+                <Button colored>Thing1</Button>
+                <Button colored>Github</Button>
+              </CardActions>
+              <CardMenu style={{ color: "#fff" }}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+          </div>
+        </div>
+      );
     }
+  }
 
-    toggleCategories() {
-        if(this.state.activeTab === 0){
-            return(
-                <Card shadow = {5} style = {{minWidth: '450', margin: 'auto'}}>
-                    <CardTitle style = {{color: '#fff', height: '200px', background: '#fff'}}>
-                        Experience</CardTitle>
-                        <CardText>
-                            Dope Stuff
-                        </CardText>
-                        <CardActions border>
-                            <Button colored>Thing1</Button>
-                        </CardActions>
-                        <CardMenu style = {{color: '#fff'}}>
-                            <IconButton name = "share" />
-                        </CardMenu>
-                </Card>
+  render() {
+    return (
+      <div className="category-tabs">
+        <Tabs
+          activeTab={this.state.activeTab}
+          onChange={tabId => this.setState({ activeTab: tabId })}
+          ripple
+        >
+          <Tab>Thing 0</Tab>
+          <Tab>Thing 1</Tab>
+          <Tab>Thing 2</Tab>
+          <Tab>Thing 3</Tab>
+          <Tab>Thing 4</Tab>
+        </Tabs>
 
-                // <div><h1>This is Thing0</h1></div>
-            )
-        } else if(this.state.activeTab === 1) {
-            return(
-                <div><h1>Thing 1</h1></div>
-            )
-        } else if(this.state.activeTab === 2) {
-            return(
-                <div><h1>Thing 2 </h1></div>
-            )
-        } else if(this.state.activeTab === 3) {
-            return(
-                <div><h1>Thing 3</h1></div>
-            )
-        } else if(this.state.activeTab === 4) {
-            return(
-                <div><h1>Thing 4</h1></div>
-            )
-        }
-    }
-    render() {
-        return (
-            <div className = "category-tabs">
-                <Tabs activeTab = {this.state.activeTab} onChange = {(tabId) => this.setState({ activeTab: tabId })} ripple>
-                    <Tab>Thing 0</Tab>
-                    <Tab>Thing 1</Tab>
-                    <Tab>Thing 2</Tab>
-                    <Tab>Thing 3</Tab>
-                    <Tab>Thing 4</Tab>
-                </Tabs>
-
-                <section className = "projects-grid">
-                    {this.toggleCategories()}
-                </section>
-            
-            </div>
-        )
-    }
+        <Grid>
+          <Cell col={12}>
+            <div className="content">{this.toggleCategories()}</div>
+          </Cell>
+        </Grid>
+      </div>
+    );
+  }
 }
 
-export default Exp
+export default Exp;

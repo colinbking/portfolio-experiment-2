@@ -1,39 +1,39 @@
 .header-color {
   background: white;
-  background: -webkit-linear-gradient(to right)
+  background: -webkit-linear-gradient(to right);
 }
 
 .landing-grid {
-  background: #000000
+  background: #000000;
 }
 
 .main-header {
-  margin-bottom: '5em'
+  margin-bottom: "5em";
 }
 
 .main-img {
   position: relative;
-  top:0;
+  top: 0;
   left: 0;
-  height: 1000px; 
+  height: 1000px;
 }
 /* https://cdn.vox-cdn.com/thumbor/o4J8B8ssJI6GCxph8wBcIFdeuTg=/0x0:4584x3056/1520x0/filters:focal(0x0:4584x3056):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8654949/chickfila_spicy_sandwich.jpg */
 
 .banner-text {
   position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   background-color: grey;
-  opacity: .8;
+  opacity: 0.8;
   width: 75%;
   margin: auto;
   border-radius: 20px;
   text-align: center;
 }
 
-.banner-text h1{
+.banner-text h1 {
   font-size: 50px;
   font-weight: bold;
   color: white;
@@ -44,7 +44,6 @@
   width: 50%;
   margin: auto;
   text-align: center;
-
 }
 
 .banner-text p {
@@ -66,4 +65,24 @@
   color: white;
   font-size: 5em;
   padding: 2px;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* resume page */
+.resume-right-col {
+  background: #27221f;
+  color: white;
 }
